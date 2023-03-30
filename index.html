@@ -429,18 +429,28 @@
         </button>          
     <script src="./js/modal.js"></script>
     <h3 class="modal-title">Leave your contacts and we will call you back</h3>
+    
     <form class="modal-form form">
       <lable for="name" class="form-lable">Name
-<input type="text" id="name" class="font-input">
+        <div class="form-group"> 
+<input type="text" id="name" class="form-input" maxlength="20">
+<svg class="form-icon" width="24" height="24">
+    <use href="./images/sprite.svg#user-icon"></use>
+</svg>
+</div>
+
 </lable>
 <label for="tel" class="form-lable">Phone 
-<input type="text" id="tel" class="font-input" name="phone" required minlength="13" maxlength="13">
+  <div class="form-group"> 
+<input type="text" id="tel" class="form-input" name="phone" required minlength="13" maxlength="13">
+  </div>
 </label>
 <label for="email" class="form-lable">Email
-<input type="text" id="email" class="font-input">
+  <div class="form-group"> 
+<input type="text" id="email" class="form-input">
 </label>
 <button class="basic-button" type="submit">Send</button>
-
+ </div>
     </form>
     </div>
     </div>
