@@ -432,23 +432,32 @@
     
     <form class="modal-form form">
       <lable for="name" class="form-lable">Name
-        <div class="form-group"> 
-<input type="text" id="name" class="form-input" maxlength="20">
+        <div class="form-group">      
+<input type="text" id="name" class="form-input" maxlength="20"/>
 <svg class="form-icon" width="24" height="24">
     <use href="./images/sprite.svg#user-icon"></use>
 </svg>
 </div>
-
 </lable>
+
 <label for="tel" class="form-lable">Phone 
   <div class="form-group"> 
-<input type="text" id="tel" class="form-input" name="phone" required minlength="13" maxlength="13">
+<input type="text" id="tel" class="form-input" name="phone" required minlength="13" maxlength="13"/>
   </div>
 </label>
 <label for="email" class="form-lable">Email
   <div class="form-group"> 
-<input type="text" id="email" class="form-input">
+<input type="text" id="email" class="form-input"/>
+</div>
 </label>
+
+  <label for="message" class="form-lable">Comment
+    <div class="form-group">
+    
+  <textarea name="message" id="message" class="form-textarea"> 
+</label>
+</div>
+
 <button class="basic-button" type="submit">Send</button>
  </div>
     </form>
