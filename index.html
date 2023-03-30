@@ -429,7 +429,6 @@
         </button>          
     <script src="./js/modal.js"></script>
     <h3 class="modal-title">Leave your contacts and we will call you back</h3>
-    
     <form class="modal-form form">
       <lable for="name" class="form-lable">Name
         <div class="form-group">      
@@ -450,14 +449,36 @@
 <input type="text" id="email" class="form-input"/>
 </div>
 </label>
-
+<div class="form-group">
   <label for="message" class="form-lable">Comment
-    <div class="form-group">
-    
-  <textarea  name="message" id="message" class="form-textarea" placeholder="Type your message here..."> 
-</div>
-  </label>
+    <textarea  name="message" id="message" class="form-textarea" placeholder="Text input">
+    </textarea>
 
+  </label>
+  </div>
+ <div class="modal-checkbox-field">
+            <input
+              class="checkbox-input visually-hidden"
+              type="checkbox"
+              name="privacy-policy-agreement"
+              id="privacy-policy-agreement"
+              value="true"
+              required
+            />
+            <label for="privacy-policy-agreement" class="checkbox-area">
+              <span class="custom-checkbox">
+                <svg class="checkmark-icon" width="10" height="8">
+                  <use href="./images/sprite.svg#default"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the&nbsp;<a
+                href="#"
+                target="_blank"
+                class="privacy-policy-link"
+                >Privacy Policy</a
+              >
+            </label>
+          </div>
 
 <button class="basic-button" type="submit">Send</button>
  </div>
