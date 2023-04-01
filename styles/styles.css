@@ -638,7 +638,7 @@ a.portfolio-card-link.link {
 .signup-icon {
   fill: #ffffff;
 }
-input::placeholder {
+.signup-input {
   padding: 8px;
   font-family: "Roboto";
   font-style: normal;
