@@ -583,6 +583,7 @@ a.portfolio-card-link.link {
 .footer-subscription-form {
   display: flex;
   gap: 24px;
+  align-items: center;
 }
 .footer-subscription-title {
   font-weight: 500;
@@ -597,7 +598,6 @@ a.portfolio-card-link.link {
   padding: 8px 16px;
   font-size: 12px;
   line-height: 2;
-  display: flex;
   align-items: center;
   letter-spacing: 0.04em;
   background-color: transparent;
@@ -606,6 +606,18 @@ a.portfolio-card-link.link {
   border-radius: 4px;
   color: #ffffff;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+input,
+email {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
 }
 
 .signup-button {
@@ -619,6 +631,7 @@ a.portfolio-card-link.link {
   background-color: #4d5ae5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
 }
 
 .signup-button:hover,
@@ -750,6 +763,17 @@ a.portfolio-card-link.link {
 }
 .form-input:hover + .form-icon {
   fill: var(--hover-button-color);
+}
+input,
+textarea {
+  padding: 8px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 .form-textarea {
   display: block;
