@@ -9,6 +9,7 @@
   --backdrop-color: rgba(46, 47, 66, 0.4);
   --rgba: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --hover-effect: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --hover-button-color: #404bbf;
   --basic-input-font-size: 12px;
   --checkbox-border-color: #2e2f42;
@@ -638,13 +639,14 @@ a.portfolio-card-link.link {
 .signup-icon {
   fill: #ffffff;
 }
-.signup-input {
+
+.signup-input::placeholder {
   padding: 8px;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 0.24em;
   letter-spacing: 0.04em;
   color: #ffffff;
 }
@@ -710,61 +712,95 @@ a.portfolio-card-link.link {
   fill: currentColor;
 }
 /*--------Modal form-------*/
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
 .modal-title {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 0.24em;
   text-align: center;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-top: 24px;
   margin-bottom: 16px;
 }
-.form-input {
-  width: 100%;
-  height: 40px;
-  padding: 11px 38px;
-  border: 1px solid #2e2f42;
-  border-radius: 4px;
+
+.modal-form-field {
+  margin-bottom: 0px;
+}
+.modal-form-input-wraper {
+  position: relative;
+  display: block;
+  margin-bottom: 8px;
+}
+.modal-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+  fill: #2e2f42;
+}
+.modal-form-input-icon:hover,
+.modal-form-input-icon:focus {
+  fill: #4d5ae5;
   outline: none;
 }
-.form-input:hover,
-.form-input:focus {
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 38px;
+  color: #8e8f99;
+  font-size: 16px;
+  line-height: 1.33;
+  margin-bottom: 0px;
+  font-weight: 400;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+}
+.modal-form-input:focus,
+.modal-form-input:hover {
+  outline: none;
+  border-color: #4d5ae5;
+}
+
+.modal-form-input:focus + .modal-form-input-icon {
+  fill: #4d5ae5;
+}
+.modal-form-input:hover + .modal-form-input-icon {
+  fill: #4d5ae5;
+}
+.modal-form-input-desc {
+  display: block;
+  font-size: 12px;
+  line-height: 1.33;
+  margin-bottom: 4px;
+  font-weight: 400;
+  color: #8e8f99;
+}
+
+.modal-form-message {
+  resize: none;
+  width: 100%;
+  height: 120px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border-color var(--hover-effect);
+  margin-bottom: 16px;
+}
+.modal-form-message:focus,
+.modal-form-message:focus {
+  outline: none;
   border-color: var(--hover-button-color);
 }
 
-.form-lable {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  letter-spacing: 0.04em;
-  color: #8e8f99;
-}
-.form-group {
-  position: relative;
-  margin-bottom: 12px;
-}
-.form-icon {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.form-input:focus {
-  border-color: var(--hover-button-color);
-}
-.form-input:focus + .form-icon {
-  fill: var(--hover-button-color);
-}
-.form-input:hover + .form-icon {
-  fill: var(--hover-button-color);
-}
-input::placeholder {
-  padding: 8px;
+.modal-form-message::placeholder {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -773,25 +809,7 @@ input::placeholder {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
-.form-textarea {
-  display: block;
-  width: 100%;
-  height: 120px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 16px;
-  padding-right: 8px;
-  border: 1px solid #2e2f42;
-  border-radius: 4px;
-  outline: none;
-  resize: none;
-}
-.form-textarea:hover,
-.form-textarea:focus {
-  border-color: var(--hover-button-color);
-}
 /*  ------------------ Modal checkbox------------------ */
-
 .modal-checkbox-field {
   margin-bottom: 24px;
 }
@@ -812,7 +830,6 @@ input::placeholder {
   width: 16px;
   height: 16px;
   margin-right: 8px;
-
   border: 1.25px solid var(--checkbox-border-color);
   border-radius: 2px;
   fill: transparent;
@@ -820,6 +837,9 @@ input::placeholder {
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
     outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkmark-icon {
+  opacity: 0;
 }
 
 .checkbox-input:focus + .checkbox-area .custom-checkbox {
@@ -835,14 +855,16 @@ input::placeholder {
   border: none;
   fill: #f4f4fd;
 }
-
-.privacy-policy-link {
+.privacy-policy-link:hover,
+.privacy-policy-link:focus {
   color: #4d5ae5;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privacy-policy-link:hover {
 }
 .privacy-policy-link:hover,
 .privacy-policy-link:focus {
-  color: red;
+  color: #4d5ae5;
 }
 
 /*  --------- Basik button --------- */
