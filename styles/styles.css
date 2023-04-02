@@ -855,12 +855,16 @@ a.portfolio-card-link.link {
   border: none;
   fill: #f4f4fd;
 }
+.checkbox-input:checked + .checkbox-area .custom-checkbox .checkmark-icon {
+  opacity: 1;
+}
 .privacy-policy-link:hover,
 .privacy-policy-link:focus {
   color: #4d5ae5;
 }
 
-.privacy-policy-link:hover {
+.privacy-policy-link {
+  text-decoration: underline;
 }
 .privacy-policy-link:hover,
 .privacy-policy-link:focus {
