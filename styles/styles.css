@@ -48,9 +48,12 @@ button {
   cursor: pointer;
 }
 .container {
-  max-width: 1158px;
-  margin: 0 auto;
-  padding: 0 15px;
+  /* --max-width: 1158px;--- */
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -204,6 +207,17 @@ body {
 
 /*--------Hero,Section -------*/
 .hero {
+  background: var(--first-text-color);
+  background-image: var(--gradient), url(./images/hero-bg-mob.jpg);
+  width: 100%;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 112px;
+  padding-bottom: 112px;
+  margin: 0 auto;
+}
+/*--.hero {
   max-width: 1440px;
   margin: 0 auto;
   background-image: var(--rgba), url(../images/people-office.jpg);
@@ -211,14 +225,21 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+
 .hero-section {
   padding-top: 188px;
   padding-bottom: 188px;
-  text-align: center;
+  text-align: center;}--*/
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--rgba), url(../images/people-office-2x.jpg);
+  }
 }
+
 .hero-title {
-  max-width: 496px;
   margin: 0 auto;
   margin-bottom: 48px;
   font-size: 56px;
@@ -248,7 +269,7 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-
+/* ------------Directions--------- */
 .directions {
   padding-top: 120px;
   padding-bottom: 0px;
@@ -269,9 +290,11 @@ body {
 }
 
 .directions-item {
-  flex-basis: calc((100% - 3 * 24px) / 4);
+  width: 100%;
+  /* ---- flex-basis: calc((100% - 3 * 24px) / 4);
+  
 
-  border-radius: 4px;
+ border-radius: 4px;-- */
 }
 
 .directions-subtitle {
@@ -287,6 +310,7 @@ body {
   margin-top: 8px;
 }
 
+/* ------------Doing--------- */
 .doing {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -339,7 +363,10 @@ body {
   justify-content: center;
   gap: 24px;
 }
-
+.container.container-mini {
+  padding-left: 28px;
+  padding-right: 28px;
+}
 .main-team-item {
   width: calc((100% - 96px) / 4);
   background: #ffffff;
@@ -575,7 +602,7 @@ a.portfolio-card-link.link {
 .footer-team-soc-link:is(:hover, :focus) {
   background: #31d0aa;
 }
-/*  --------- [Footer sign-up form] --------- */
+/*  --------- Footer sign-up form --------- */
 
 .footer-subscription-field {
   margin-left: auto;
@@ -811,7 +838,7 @@ a.portfolio-card-link.link {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
-/*  ------------------ Modal checkbox------------------ */
+/*------------------ Modal checkbox------------------ */
 .modal-checkbox-field {
   margin-bottom: 24px;
 }
