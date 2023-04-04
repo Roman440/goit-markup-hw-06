@@ -276,8 +276,8 @@ body {
 }
 
 .directions-list-list {
-  display: flex;
-  column-gap: 24px;
+  flex-direction: column;
+  gap: 24px;
 }
 .directions-link {
   width: 100%;
