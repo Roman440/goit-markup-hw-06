@@ -27,6 +27,9 @@
   font-size: 16px;
   text-align: left;
 }
+.directions-list-list {
+  flex-direction: column;
+}
 
 /* ------------Team---------- */
 .container.container-mini {

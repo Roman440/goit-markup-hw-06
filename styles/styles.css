@@ -207,7 +207,7 @@ body {
 
 /*--------Hero,Section -------*/
 .hero {
-  background: var(--first-text-color);
+  background: #2e2f42;
   background-image: var(--gradient), url(./images/hero-bg-mob.jpg);
   width: 100%;
   background-position: 50% 50%;

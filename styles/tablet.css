@@ -4,3 +4,8 @@
   }
   /* --------------Header------------- */
 }
+/* ------------Directions--------*/
+
+.directions-list-list {
+  flex-direction: row;
+}
